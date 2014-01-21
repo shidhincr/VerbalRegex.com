@@ -1,18 +1,26 @@
 'use strict';
 
-angular.module('verbalregexApp', [
+angular.module( 'verbalregexApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
   'ngRoute'
-])
-  .config(function ($routeProvider) {
+ ] )
+  .config( function( $routeProvider ) {
     $routeProvider
-      .when('/', {
+      .when( '/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-      })
-      .otherwise({
+      } )
+      .when( '/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl'
+      } )
+      .when( '/contribute', {
+        templateUrl: 'views/contribute.html',
+        controller: 'ContributeCtrl'
+      } )
+      .otherwise( {
         redirectTo: '/'
-      });
-  });
+      } );
+  } );

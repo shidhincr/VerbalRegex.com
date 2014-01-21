@@ -7,8 +7,8 @@
 
 /* Space out content a bit */
 body {
-    padding-top: 20px;
     padding-bottom: 20px;
+    background-image: url('../images/old_moon.png')
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -21,15 +21,47 @@ body {
 
 /* Custom page header */
 .header {
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #b7b7b7;
+    box-shadow: 0 1px 0 #ededed;
+    padding: 12px;
+    background-color: rgba(204, 204, 204, 0.6);
+    text-shadow: 0 1px #fdfdfd;
+    .header-title {
+        font-family: 'Audiowide', cursive,'Helvetica Neue',Helvetica,Arial,sans-serif;
+        font-size: 20px;
+        color: #777;
+        .small-title {
+            font-size: 12px; 
+        }
+    }
+    /*overriding bootstrap css*/ 
+    .nav-pills {
+        margin-right: 15px;
+        >li{
+            &.active > a {
+                text-shadow: none;
+                background-color: #585B5E;
+                color: #fff; 
+                :active,
+                :hover,
+                :focus {
+                    background-color: #585B5E;
+                }       
+            }
+            > a {
+                color: #333;
+                padding: 3px 15px;
+            }
+        }
+    }
 }
 
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
     margin-top: 0;
     margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px;
+    line-height: 20px;
+    padding-left: 20px;
 }
 
 /* Custom page footer */
