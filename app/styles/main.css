@@ -1,5 +1,6 @@
 body {
     background: #fafafa;
+    background-image: url('/images/old_moon.png');
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
