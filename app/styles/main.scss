@@ -122,14 +122,14 @@ $minHeight: 600px;
     @include shadow;
 }
 .ui-shadow-inset {
-    @include shadow(#999,5px,inset);
+    @include shadow(#555,5px,inset);
 }
 .ui-stripped {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
-    border: 4px dotted rgba(0, 0, 0, 0.1);
+    border: 5px solid rgba(0, 0, 0, 0.1);
     &.jumbotron {
-        border-bottom: 4px dotted rgba(0, 0, 0, 0.1);
+        border-bottom: 5px solid rgba(0, 0, 0, 0.1);
     }
 }
 .ui-results {
