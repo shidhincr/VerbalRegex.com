@@ -104,6 +104,31 @@ body {
     margin-top: 28px;
 }
 
+/* custom container */ 
+
+.main-content {
+    padding: 0 10px;
+    padding-right: 30px;
+}
+
+/* utilities */
+$minHeight: 600px;
+.min-content-height {
+    min-height: $minHeight;
+}
+@mixin shadow( $color: #999, $width: 5px) {
+    box-shadow: 0 0 $width $color;
+}
+.ui-shadow {
+    @include shadow;
+}
+.ui-results {
+    @extend .ui-shadow;
+    background-color: rgba(255,255,255,0.5);
+    padding: 10px;
+    border-radius: 5px;
+    height: $minHeight;
+}
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
