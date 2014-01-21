@@ -107,8 +107,7 @@ body {
 /* custom container */ 
 
 .main-content {
-    padding: 0 10px;
-    padding-right: 30px;
+    padding: 0 18px;
 }
 
 /* utilities */
@@ -116,18 +115,32 @@ $minHeight: 600px;
 .min-content-height {
     min-height: $minHeight;
 }
-@mixin shadow( $color: #999, $width: 5px) {
-    box-shadow: 0 0 $width $color;
+@mixin shadow( $color: #999, $width: 5px, $inset:'') {
+    box-shadow: 0 0 $width $color $inset;
 }
 .ui-shadow {
     @include shadow;
 }
-.ui-results {
-    @extend .ui-shadow;
-    background-color: rgba(255,255,255,0.5);
-    padding: 10px;
+.ui-shadow-inset {
+    @include shadow(#999,5px,inset);
+}
+.ui-stripped {
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 5px;
+    border: 4px dotted rgba(0, 0, 0, 0.1);
+    &.jumbotron {
+        border-bottom: 4px dotted rgba(0, 0, 0, 0.1);
+    }
+}
+.ui-results {
+    @extend .ui-shadow-inset;
+    padding: 20px 0;
     height: $minHeight;
+    .output {
+        height: 100%;
+        border-left: 1px solid #D3CFCF;
+        box-shadow: 1px 0px 0px #FEFEFE inset;
+    }
 }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -144,7 +157,7 @@ $minHeight: 600px;
     }
     /* Space out the masthead */
     .header {
-        margin-bottom: 30px;
+        margin-bottom: 5px;
     }
     /* Remove the bottom border on the jumbotron for visual effect */
     .jumbotron {
