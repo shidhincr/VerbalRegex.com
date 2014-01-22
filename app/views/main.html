@@ -1,12 +1,28 @@
 <div class="row min-content-height ui-results ui-stripped">
-    <div class="col-md-3">
+    <div class="col-md-3" ng-controller="SearchpatternsCtrl">
         <form action="" role="form">
             <div class="form-group">
                 <!-- <label for="searchInput">Search Patterns:</label> -->
-                <input type="search" class="form-control" placeholder="Search patterns" id="searchInput">
+                <input type="search" class="form-control" placeholder="Search patterns" id="searchInput" ng-model="search">
             </div>
         </form>
+        <div>
+            <button type="button" class="btn btn-default btn-sm m" ng-repeat="pattern in patterns | filter:search">
+                {{pattern}}<span class="glyphicon glyphicon-arrow-right m-left"></span>
+            </button>
+        </div>
     </div>
     <div class="col-md-9 output">
+        <div class="ui-draggable-area pos-relative">
+            <div class="message abs-center">Drag and drop the regex patterns here</div>
+        </div>
+        <div class="ui-regex-output">
+            <div class="row">
+                <div class="col-xs-12">
+                  <textarea name="" id="finalRegex" rows="1" class="form-control" ng-model="mdFinalregex"></textarea>
+                  <button class="btn btn-primary btn-sm" ng-disabled="!mdFinalregex">Copy</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
