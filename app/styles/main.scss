@@ -1,3 +1,4 @@
+
 .browsehappy {
     margin: 0.2em 0;
     background: #ccc;
@@ -108,6 +109,7 @@ body {
 
 .main-content {
     padding: 0 18px;
+    padding-bottom: 10px;
 }
 
 /* utilities */
@@ -125,6 +127,10 @@ $minHeight: 600px;
 }
 .min-content-height {
     min-height: $minHeight;
+}
+/*100% content height */
+body,html,.full-height {
+    height: 100%;
 }
 .m {
     margin: 5px;
@@ -155,7 +161,7 @@ $minHeight: 600px;
 .ui-results {
     @extend .ui-shadow-inset;
     padding: 20px 0;
-    height: $minHeight;
+    // height: $minHeight;
     .output {
         height: 100%;
         border-left: 1px solid #D8D8D8;
@@ -168,12 +174,13 @@ $minHeight: 600px;
         }
     }
     .ui-draggable-area {
-        min-height: 400px;
+        // min-height: 400px;
+        height: 66%;
         border: 5px dashed rgba(128, 169, 221, 0.4);
         background-color: #FFF;
     }
     .ui-regex-output {
-        min-height: 120px;
+        // min-height: 120px;
         border-top: 1px solid #E0DDDD;
         margin-top: 10px;
         padding: 20px 0px;
@@ -190,6 +197,7 @@ $minHeight: 600px;
         }
     }
 }
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
     .container {
