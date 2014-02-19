@@ -12,9 +12,9 @@
             </button>
         </div>
     </div>
-    <div class="col-md-9 output">
+    <div class="col-md-9 output" ng-controller="OutputCtrl">
         <div class="ui-draggable-area pos-relative">
-            <div class="message abs-center">Drag and drop the regex patterns here</div>
+            <div class="message abs-center" ng-hide="patternsAdded()">Click the patterns on left sidebar to add </div>
         </div>
         <div class="ui-regex-output">
             <div class="row">
